@@ -1,0 +1,18 @@
+@font-face { font-family: "QinfangZhiMang"; src: url("./ZhiMangXing-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "QinfangXingkai"; src: local("STXingkaiSC-Light"), local("Xingkai SC"); font-weight: 400; font-display: swap; }
+:root[data-font="modern"], [data-font-pick="modern"] { --display: "PingFang SC", "Microsoft YaHei", sans-serif; --display-weight: 600; --display-tracking: -.02em; }
+:root[data-font="rounded"], [data-font-pick="rounded"] { --display: "Yuanti SC", "圆体-简", "STYuanti-SC-Regular", "YouYuan", "PingFang SC", sans-serif; --display-weight: 400; --display-tracking: .02em; }
+:root[data-font="lanting"], [data-font-pick="lanting"] { --display: "Lantinghei SC", "兰亭黑-简", "Microsoft YaHei", sans-serif; --display-weight: 400; --display-tracking: .01em; }
+:root[data-font="fangsong"], [data-font-pick="fangsong"] { --display: "STFangsong", "华文仿宋", "FangSong", "Songti SC", serif; --display-weight: 400; --display-tracking: .035em; }
+:root[data-font="editorial"], [data-font-pick="editorial"] { --display: "Songti SC", "STSong", "Noto Serif CJK SC", serif; --display-weight: 400; --display-tracking: .015em; }
+:root[data-font="humanist"], [data-font-pick="humanist"] { --display: "Kaiti SC", "STKaiti", "KaiTi", "Songti SC", serif; --display-weight: 400; --display-tracking: .025em; }
+:root[data-font="hiragino"], [data-font-pick="hiragino"] { --display: "Hiragino Sans GB", "冬青黑体简体中文", "Microsoft YaHei", sans-serif; --display-weight: 400; --display-tracking: 0em; }
+:root[data-font="heiti"], [data-font-pick="heiti"] { --display: "Heiti SC", "黑体-简", "STHeiti", "Microsoft YaHei", sans-serif; --display-weight: 300; --display-tracking: .025em; }
+
+:root[data-font="xingkai"], [data-font-pick="xingkai"] { --display: "QinfangXingkai", "Xingkai SC", "行楷-简", "Kaiti SC", serif; --display-weight: 400; --display-tracking: .03em; }
+:root[data-font="zhimang"], [data-font-pick="zhimang"] { --display: "QinfangZhiMang", "Kaiti SC", serif; --display-weight: 400; --display-tracking: .035em; }
+:root[data-font="wangxizhi"], [data-font-pick="wangxizhi"] { --display: "QinfangWangXizhi", "Kaiti SC", serif; --display-weight: 400; --display-tracking: .025em; }
+:root[data-font="shoujin"], [data-font-pick="shoujin"] { --display: "QinfangShouJin", "STFangsong", serif; --display-weight: 400; --display-tracking: .04em; }
+[data-font-missing="true"] b { font: 400 15px/1.7 "PingFang SC", sans-serif !important; letter-spacing: 0 !important; opacity: .8; }
+:root[data-font] { --body: var(--display); --sans: var(--display); --serif: var(--display); }
+:root[data-font] .brand { font-family: var(--display); }
