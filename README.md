@@ -7,8 +7,9 @@
 1. 克隆或下载整个仓库，保留 `app/` 和 `runtime/`。
 2. 安装并登录 Codex。
 3. 双击 `启动汇报工作台.command`，浏览器将打开 <http://127.0.0.1:18776/>。
+4. 使用完毕后，双击 `关闭汇报工作台.command` 停止后台服务，本地报告和数据保留。
 
-附带 Apple Silicon 和 Intel 两套 Python 运行环境，无需另装 Node 或 Homebrew。首次打开未签名程序的处理方法见 [先读我.md](先读我.md)。
+启动器优先使用通过自检的本机 Python 3.9 或更新版本；没有可用版本时，使用附带的 Apple Silicon 或 Intel Python 运行环境，无需另装 Node 或 Homebrew。首次打开未签名程序的处理方法见 [先读我.md](先读我.md)。
 
 ## 功能
 
@@ -53,11 +54,11 @@ runtime/                   # 两种 Mac 架构的 Python 归档
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-`SHA256SUMS.txt` 覆盖原始交付包文件，不包含后续新增的仓库说明文件。运行环境来源和哈希见 [runtime/manifest.json](runtime/manifest.json)，交付验收范围见 [交付检查.md](交付检查.md)。
+`SHA256SUMS.txt` 覆盖原始交付包文件，不包含后续新增的仓库说明文件；后续修复过的启动器和使用说明会与原始校验值不同。运行环境来源和哈希见 [runtime/manifest.json](runtime/manifest.json)，交付验收范围见 [交付检查.md](交付检查.md)。
 
 ## 已知限制
 
-- 内置 Python 在部分 Mac 环境可能被系统终止，首次放行说明见使用文档。
+- 内置 Python 在部分 Mac 环境可能被系统终止；启动器会优先使用通过自检的本机 Python，并在需要重新解压时备份、替换不完整的内置环境。没有可用运行环境时，处理方法见使用文档。
 - 已有后台服务运行时，启动器会复用它；使用新版前应先停止旧服务。
 - 当前 HTML 去重逻辑不会保存仅摘要或证据发生变化的提交。
 - Intel 运行环境尚未完成 Intel 真机验收。
